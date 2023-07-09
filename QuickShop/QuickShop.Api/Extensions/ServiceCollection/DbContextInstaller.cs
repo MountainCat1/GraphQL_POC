@@ -11,15 +11,12 @@ public static class DbContextInstaller
     {
         services.AddDbContext<QuickShopDbContext>(options =>
         {
-            options.UseSqlServer(configuration.GetConnectionString(DatabaseConnectionStringKey),
+            var path = Path.Combine(Environment.CurrentDirectory, "database.db;");
+            options.UseSqlite($"Data Source={path};",
                 b =>
                 {
                     b.MigrationsAssembly(typeof(ApiAssemblyMarker).Assembly.FullName);
-                    b.EnableRetryOnFailure(5, TimeSpan.FromSeconds(5.0), null);
                 });
-            options.UseLoggerFactory(LoggerFactory.Create(lb => lb
-                .AddFilter((_, _) => false)
-                .AddConsole()));
         });
 
 

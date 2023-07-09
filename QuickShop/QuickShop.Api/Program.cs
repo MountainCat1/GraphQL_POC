@@ -35,7 +35,6 @@ services.AddLogging(loggingBuilder =>
 
 //  === INSTALLERS ===
 services.InstallSwagger();
-services.InstallMassTransit(configuration);
 services.InstallCors();
 services.InstallDbContext(configuration);
 //  ===            ===

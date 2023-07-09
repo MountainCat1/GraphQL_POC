@@ -31,10 +31,10 @@
     <ItemGroup>
       <ProjectReference Include="..\QuickShop.Application\QuickShop.Application.csproj" />
       <ProjectReference Include="..\QuickShop.Infrastructure\QuickShop.Infrastructure.csproj" />
-      <ProjectReference Include="..\Catut.Application\Catut.Application.csproj" />
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Migrations\" />
       <Folder Include="Modules" />
     </ItemGroup>
 

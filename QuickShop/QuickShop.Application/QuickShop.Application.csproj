@@ -9,7 +9,6 @@
     <ItemGroup>
       <ProjectReference Include="..\QuickShop.Domain\QuickShop.Domain.csproj" />
       <ProjectReference Include="..\QuickShop.Infrastructure\QuickShop.Infrastructure.csproj" />
-      <ProjectReference Include="..\Catut.Infrastructure\Catut.Infrastructure.csproj" />
     </ItemGroup>
 
     <ItemGroup>
