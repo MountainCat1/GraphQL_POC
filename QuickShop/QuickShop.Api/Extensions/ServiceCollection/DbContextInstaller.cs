@@ -1,5 +1,5 @@
-﻿using QuickShop.Infrastructure.Contexts;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Path = System.IO.Path;
 
 namespace QuickShop.Api.Extensions.ServiceCollection;
 
@@ -21,5 +21,12 @@ public static class DbContextInstaller
 
 
         return services;
+    }
+}
+
+public class QuickShopDbContext : DbContext
+{
+    public QuickShopDbContext(DbContextOptions options) : base(options)
+    {
     }
 }
